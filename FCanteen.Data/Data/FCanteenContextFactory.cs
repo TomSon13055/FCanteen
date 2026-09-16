@@ -22,9 +22,15 @@ namespace FCanteen.Data.Data
             var optionsBuilder =
                 new DbContextOptionsBuilder<FCanteenContext>();
 
-            optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.UseSqlServer(
+                connectionString,
+                sqlOptions =>
+                {
+                    sqlOptions.CommandTimeout(300);
+                });
 
-            return new FCanteenContext(optionsBuilder.Options);
+            return new FCanteenContext(
+                optionsBuilder.Options);
         }
     }
 }

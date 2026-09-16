@@ -10,6 +10,8 @@ namespace FCanteen.Data.Entities
 
         public string CounterName { get; set; } = string.Empty;
 
+        public string BranchCode { get; set; } = string.Empty;
+
         public decimal TotalAmount { get; set; }
 
         public DateTime CreatedAt { get; set; }

@@ -18,6 +18,10 @@ namespace FCanteen.Data.Data
 
         public DbSet<DeviceLog> DeviceLogs { get; set; }
 
+        public DbSet<Ingredient> Ingredients { get; set; }
+
+        public DbSet<DailySettlement> DailySettlements { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -43,6 +47,28 @@ namespace FCanteen.Data.Data
                 .HasOne(x => x.MenuItem)
                 .WithMany(x => x.TicketLines)
                 .HasForeignKey(x => x.MenuItemId);
+
+            modelBuilder.Entity<Ingredient>()
+                .Property(x => x.StockQuantity)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<Ingredient>()
+                .Property(x => x.AlertThreshold)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<DailySettlement>()
+                .Property(x => x.TotalRevenue)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<OrderTicket>()
+                 .HasIndex(x => x.CreatedAt);
+
+            modelBuilder.Entity<OrderTicket>()
+                .HasIndex(x => new
+                {
+                    x.BranchCode,
+                    x.CreatedAt
+                });
 
             modelBuilder.Entity<MenuItem>().HasData(
                 new MenuItem

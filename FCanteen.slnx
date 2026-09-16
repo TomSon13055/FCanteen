@@ -1,5 +1,6 @@
 <Solution>
-  <Project Path="FCanteen.Data/FCanteen.Data.csproj" Id="fa75d783-ad19-4dc1-a115-edabdf33e5f3" />
-  <Project Path="FCanteen.KitchenServer/FCanteen.KitchenServer.csproj" Id="31d81d0a-8837-44bf-b1c9-9b74a63b5576" />
-  <Project Path="FCanteen.PosClient/FCanteen.PosClient.csproj" Id="561046e7-b534-4a12-945e-9e93ef780803" />
+  <Project Path="D:/PRN222/FCanteen/FCanteen.Data/FCanteen.Data.csproj" Id="fa75d783-ad19-4dc1-a115-edabdf33e5f3" />
+  <Project Path="D:/PRN222/FCanteen/FCanteen.KitchenServer/FCanteen.KitchenServer.csproj" Id="31d81d0a-8837-44bf-b1c9-9b74a63b5576" />
+  <Project Path="D:/PRN222/FCanteen/FCanteen.PosClient/FCanteen.PosClient.csproj" Id="561046e7-b534-4a12-945e-9e93ef780803" />
+  <Project Path="FCanteen.Lab02Runner/FCanteen.Lab02Runner.csproj" Id="9037b9e7-6ce9-4fe6-b58a-8536ef797e58" />
 </Solution>
